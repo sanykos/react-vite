@@ -20,7 +20,7 @@ module.exports = {
     project: './tsconfig.json',
   },
   plugins: ['react', '@typescript-eslint', 'prettier'],
-  ignorePatterns: ['vite.config.ts'],
+  // ignorePatterns: ['vite.config.ts'],
   rules: {
     'react/react-in-jsx-scope': 0,
     'no-console': 'error',

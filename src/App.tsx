@@ -5,7 +5,7 @@ import styles from './app.module.scss';
 function App() {
   return (
     <div className="App">
-      <h1 className={cn(styles.red)}>React start</h1>
+      <h1 className={cn(styles.red)}>Hello world</h1>
       <form action="">
         <input
           type="text"
