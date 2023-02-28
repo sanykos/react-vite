@@ -1,15 +1,19 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
+
+import { postApi } from '../services/PostService';
 
 import userReducer from './reducers/UserSlice';
 
 const rootReducer = combineReducers({
   userReducer,
+  [postApi.reducerPath]: postApi.reducer,
 });
 
 export const setupStore = () => {
   return configureStore({
     reducer: rootReducer,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(postApi.middleware),
   });
 };
 

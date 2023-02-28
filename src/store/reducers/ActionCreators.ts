@@ -1,14 +1,12 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+
 import { IUser } from '../../models/User';
 
-import { AppDispatch } from '../store';
-import { userSlice } from './UserSlice';
-
-function getErrorMessage(error: unknown) {
-  if (error instanceof Error) return error.message;
-  return String(error);
-}
+// function getErrorMessage(error: unknown) {
+//   if (error instanceof Error) return error.message;
+//   return String(error);
+// }
 
 // export const fetchUsers = () => async (dispatch: AppDispatch) => {
 //   try {

@@ -1,15 +1,15 @@
 import cn from 'classnames';
 import { useEffect } from 'react';
 
-import styles from './app.module.scss';
+import PostContainer from './components/PostContainer';
 import { useAppDispatch, useAppSelector } from './hooks/redux';
 import { fetchUsers } from './store/reducers/ActionCreators';
 import { userSlice } from './store/reducers/UserSlice';
+import styles from './app.module.scss';
 
 function App() {
   // const {} = useSelector(state => state)
   // const {} = useAppSelector(state => state)
-
   const { count, users, isLoading, error } = useAppSelector(
     (state) => state.userReducer
   );
@@ -18,13 +18,16 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchUsers());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="App">
       <h1 className={cn(styles.red)}>{count}</h1>
-      <button onClick={() => dispatch(increment(5))}>increment</button>
+      <button type="button" onClick={() => dispatch(increment(5))}>
+        increment
+      </button>
       <button
+        type="button"
         onClick={() => {
           if (count > 0) dispatch(decrement(5));
         }}
@@ -38,6 +41,7 @@ function App() {
           <li key={user.id}>{user.name}</li>
         ))}
       </ul>
+      <PostContainer />
     </div>
   );
 }

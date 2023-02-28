@@ -23,13 +23,16 @@ module.exports = {
   // ignorePatterns: ['vite.config.ts'],
   rules: {
     'react/react-in-jsx-scope': 0,
+    'import/prefer-default-export': 'off',
     'no-console': 'error',
+    'no-param-reassign': 0,
+    // 'no-param-reassign': [2, { props: false }],
     // 'prefer-const': 'error',
     // quotes: ['error', 'single'],
     // 'max-len': ['error', { code: 100 }],
     // 'comma-dangle': ['error', 'always-multilinbe'],
     // semi: ['warn', 'always'],
-    allowShortCircuit: true,
+    // allowShortCircuit: true,
     'import/order': [
       'error',
       {
