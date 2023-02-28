@@ -29,6 +29,7 @@ module.exports = {
     // 'max-len': ['error', { code: 100 }],
     // 'comma-dangle': ['error', 'always-multilinbe'],
     // semi: ['warn', 'always'],
+    allowShortCircuit: true,
     'import/order': [
       'error',
       {
