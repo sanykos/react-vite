@@ -26,6 +26,44 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'no-console': 'error',
     'no-param-reassign': 0,
+    'jsx-a11y/no-static-element-interactions': [
+      'warn',
+      {
+        handlers: [
+          'onClick',
+          'onMouseDown',
+          'onMouseUp',
+          'onKeyPress',
+          'onKeyDown',
+          'onKeyUp',
+        ],
+        allowExpressionValues: true,
+      },
+    ],
+    'jsx-a11y/click-events-have-key-events': [
+      'warn',
+      {
+        handlers: [
+          'onClick',
+          'onMouseDown',
+          'onMouseUp',
+          'onKeyPress',
+          'onKeyDown',
+          'onKeyUp',
+        ],
+      },
+    ],
+    'react/function-component-definition': [
+      'warn',
+      {
+        namedComponents: [
+          'function-expression',
+          'function-declaration',
+          'arrow-function',
+        ],
+        unnamedComponents: 'function-expression',
+      },
+    ],
     // 'no-param-reassign': [2, { props: false }],
     // 'prefer-const': 'error',
     // quotes: ['error', 'single'],
